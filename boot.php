@@ -125,7 +125,7 @@ if (!rex::isBackend()) {
                     $content = str_replace($match[0], 
                                           '<link ' . ($hasRelAttribute ? '' : 'rel="stylesheet" ') . 
                                           'href="' . trim($data) . 
-                                          (('yes' == $sets[0]['ignore_browsercache']) ? '?time=' . filemtime(ltrim($data, '/')) : '') . 
+                                          (('yes' == $sets[0]['ignore_browsercache']) ? '?time=' . filemtime(rex_path::base(ltrim($data, '/'))) : '') . 
                                           '"' . $attributesStr . '>', 
                                           $content);
                     break;
