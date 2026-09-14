@@ -44,7 +44,7 @@ class minify
 
     public static function relativePath($file)
     {
-        return substr($file, strlen(rex_path::base('')) - 1);
+        return str_replace('\\', '/', substr($file, strlen(rex_path::base('')) - 1));
     }
 
     public function minify($type, $set = 'default', $output = 'file')
