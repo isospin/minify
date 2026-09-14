@@ -139,7 +139,7 @@ if (!rex::isBackend()) {
 
                     break;
                   default:
-                    $content = str_replace($match[0], '<script src="' . trim($data) . (('yes' == $sets[0]['ignore_browsercache']) ? '?time=' . filemtime(rex_path::base(ltrim($data, '/'))) . '" ' . ((!empty($sets[0]['attributes'])) ? implode(' ', explode(PHP_EOL, $sets[0]['attributes'])) : '') . '></script>', $content);
+                     $content = str_replace($match[0], '<script src="' . trim($data) . (('yes' == $sets[0]['ignore_browsercache']) ? '?time=' . filemtime(rex_path::base(ltrim($data, '/'))) : '') . '" ' . ((!empty($sets[0]['attributes'])) ? implode(' ', explode(PHP_EOL, $sets[0]['attributes'])) : '') . '></script>', $content);
 
                     break;
                 }
